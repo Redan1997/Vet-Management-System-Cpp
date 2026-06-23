@@ -1,7 +1,8 @@
 #include"Animal.hpp"
 #include <vector>
+#include <memory>
 class Vet {
-    std::vector<Animal*> m_animals;
+    std::vector<std::unique_ptr<Animal>> m_animals;
 public:
     void add_animal(Animal* &&animal);
     void show_sick();
