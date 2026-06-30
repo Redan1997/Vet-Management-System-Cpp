@@ -1,4 +1,6 @@
 //created by redan ganim
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 #include <string>
 
 struct Animal {
@@ -10,5 +12,6 @@ struct Animal {
     Animal(std::string name, double temp, double breath, double heart);
     virtual ~Animal() = default;//if there at least one virtual function, the destructor should be virtual
 
-    virtual bool check_health() = 0;//pure virtual function
+    virtual bool check_health()const = 0;//pure virtual function
 };
+#endif // ANIMAL_HPP
